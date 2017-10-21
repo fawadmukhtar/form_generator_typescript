@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Generator</title>
+	<!-- boostrap select -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/	bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="select-control-wrapper">
+			<div class="select-title">
+				<h2 class="control-title">Select a control</h2>
+			</div>
+			<div class="horizontal-line">
+				<hr>
+			</div>
+			<div class="select-option-title">
+				<h4>Select a control in the list below</h4>
+			</div>
+			<div class="select-option">
+				<select id="select-option" onchange="checkSelectedValue()" class="selectpicker select-option-control">
+					<option>SELECT</option>
+					<optgroup label="Input">
+						<option value="text">Text</option>
+						<option value="password">Password</option>
+					</optgroup>
+					<optgroup label="Textarea">
+						<option value="textarea">Textarea</option>
+					</optgroup>
+					<optgroup label="Radio">
+						<option value="radio">Radio</option>
+					</optgroup>
+					<optgroup label="Checkbox">
+						<option value="checkbox">Checkbox</option>
+					</optgroup>
+					<optgroup label="Select">
+						<option value="select">Select</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="horizontal-line-b">
+				<hr>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="text form-display">
+			<div class="output-form">
+				<div class="output-form-title">
+					<h2> Set Options </h2>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<label for="text"></label>
+							<input type="text" class="form-control" id="text" placeholder="">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="edit-properties">
+				<div class="edit-properties-title">
+					<h3>Edit Properties:</h3>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="edit-form">
+					<form class="form-horizontal">
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="label">Label:</label>
+							<div class="col-sm-10">		
+								<input type="text" class="changeForm classLabel form-control" id="label" placeholder="Add/edit control label here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="id">Id:</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="id" placeholder="Add/edit id here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="class">Class:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="class" placeholder="Add/ edit class here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="name">Name:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="name" placeholder="Add/ edit name here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="placeholder">Placeholder:</label>
+							<div class="col-sm-10">
+								<input type="text" class="changeForm form-control" id="placeholder" placeholder="Add/ edit placeholder here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="required">Required:</label>
+							<div class="col-sm-10">
+								<input type="checkbox" class="form-control" id="required" >
+							</div>
+						</div>	
+						<button class="btn btn-primary" type="submit">Ok</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="password form-display">
+			<div class="output-form">
+				<div class="output-form-title">
+					<h2> Set Options </h2>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<label for="text"></label>
+							<input type="password" class="form-control" id="text" placeholder="">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="edit-properties">
+				<div class="edit-properties-title">
+					<h3>Edit Properties:</h3>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="edit-form">
+					<form class="form-horizontal">
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="label">Label:</label>
+							<div class="col-sm-10">		
+								<input type="text" class="changeForm classLabel form-control" id="label" placeholder="Add/edit control label here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="id">Id:</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="id" placeholder="Add/edit id here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="class">Class:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="class" placeholder="Add/ edit class here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="name">Name:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="name" placeholder="Add/ edit name here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="placeholder">Placeholder:</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="placeholder" placeholder="Add/ edit placeholder here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="required">Required:</label>
+							<div class="col-sm-10">
+								<input type="checkbox" class="form-control" id="required" >
+							</div>
+						</div>
+						<button class="btn btn-primary" type="submit">Ok</button>	
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="textarea form-display">
+			<div class="output-form">
+				<div class="output-form-title">
+					<h2> Set Options </h2>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<label for="textarea"></label>
+							<textarea type="text" rows="" cols="" class="form-control"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="edit-properties">
+				<div class="edit-properties-title">
+					<h3>Edit Properties:</h3>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="edit-form">
+					<form class="form-horizontal">
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="label">Label:</label>
+							<div class="col-sm-10">		
+								<input type="text" class="changeForm textarea-label form-control" id="label" placeholder="Add/edit control label here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="id">Id:</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="id" placeholder="Add/edit id here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="class">Class:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="class" placeholder="Add/ edit class here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="rows">Rows:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="changeForm textarea-rows form-control" id="rows" placeholder="Add/ edit rows here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="cols">Cols:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="changeForm textarea-cols form-control" id="cols" placeholder="Add/ edit class here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="name">Name:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="name" placeholder="Add/ edit name here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="placeholder">Placeholder:</label>
+							<div class="col-sm-10">
+								<input type="text" class="changeForm textarea-placeholder form-control" id="placeholder" placeholder="Add/ edit placeholder here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="required">Required:</label>
+							<div class="col-sm-10">
+								<input type="checkbox" class="form-control" id="required" >
+							</div>
+						</div>
+						<button class="btn btn-primary" type="submit">Ok</button>	
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="radio form-display">
+			<div class="output-form">
+				<div class="output-form-title">
+					<h2> Set Options </h2>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<label></label>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			<div class="edit-properties">
+				<div class="edit-properties-title">
+					<h3>Edit Properties:</h3>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="add-radio">
+					<form>
+						<div class="form-group">
+							<label for="add-radio">Add New Radio:</label>		
+							<input type="text" class="form-control type-radio" id="add-radio" placeholder="Add new radio">
+						<button type="submit" class="btn btn-primary add-radio-btn" >Add</button>
+						</div>
+					</form>	
+				</div>
+				<hr class="output-form-hr-line-rd">
+				<div class="edit-form">
+					<form class="form-horizontal">
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="label">Label:</label>
+							<div class="col-sm-10">		
+								<input type="text" class="changeForm form-control" id="label" placeholder="Add/edit control label here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="name">Name:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="name" placeholder="Add/ edit name here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="required">Required:</label>
+							<div class="col-sm-10">
+								<input type="checkbox" class="form-control" id="required" >
+							</div>
+						</div>
+						<button class="btn btn-primary" type="submit">Ok</button>	
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="checkbox form-display">
+			<div class="output-form">
+				<div class="output-form-title">
+					<h2> Set Options </h2>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<label for="checkbox"></label>
+							<input type="checkbox">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="edit-properties">
+				<div class="edit-properties-title">
+					<h3>Edit Properties:</h3>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="edit-form">
+					<form class="form-horizontal">
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="label">Label:</label>
+							<div class="col-sm-10">		
+								<input type="text" class="changeForm form-control" id="label" placeholder="Add/edit control label here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="name">Name:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="name" placeholder="Add/ edit name here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="required">Required:</label>
+							<div class="col-sm-10">
+								<input type="checkbox" class="form-control" id="required" >
+							</div>
+						</div>
+						<button class="btn btn-primary" type="submit">Ok</button>	
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="select form-display">
+			<div class="output-form">
+				<div class="output-form-title">
+					<h2> Set Options </h2>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<label for="select"></label>
+							<select class="form-control" id="select">
+								
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="edit-properties">
+				<div class="edit-properties-title">
+					<h3>Edit Properties:</h3>
+				</div>
+				<hr class="output-form-hr-line">
+				<div class="add-list">
+					<form>
+						<div class="form-group">
+							<label for="add-radio">Add List Item:</label>		
+							<input type="text" class="form-control type-radio" id="add-radio" placeholder="Add list item">
+						<button type="submit" class="btn btn-primary add-radio-btn">Add</button>
+						</div>
+					</form>	
+				</div>
+				<hr class="output-form-hr-line-rd">
+				<div class="edit-form">
+					<form class="form-horizontal">
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="label">Label:</label>
+							<div class="col-sm-10">		
+								<input type="text" class="changeForm form-control" id="label" placeholder="Add/edit control label here">
+							</div>
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="name">Name:</label>
+							<div class="col-sm-10">	
+								<input type="text" class="form-control" id="name" placeholder="Add/ edit name here">
+							</div>	
+						</div>
+						<div class="form-group form-fld">
+							<label class="control-label col-sm-2" for="required">Required:</label>
+							<div class="col-sm-10">
+								<input type="checkbox" class="form-control" id="required" >
+							</div>
+						</div>
+						<button class="btn btn-primary" type="submit">Ok</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="json-output-form">
+			<div class="json-output-title">
+				<h2>Form JSON Output</h2>
+			</div>
+			<hr style="padding:10px">
+			<div class="josn-output-data">
+				<pre><span class="object-prop"></span><span class="object-val"></span></pre>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<!-- bootstrap select javascript --> 
+	<script src="bootstrap-select.js"></script>
+
+	<!-- custom controller file -->
+	<script src="src/controller.js" ></script>
+	<script src="src/formGenerator.js"></script>
+</body>	
+</html>
+
